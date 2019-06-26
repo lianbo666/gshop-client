@@ -6,9 +6,20 @@
 </template>
 
 <script>
+  import {mapActions} from 'vuex'
   import FooterGuide from './components/FootGuide/FootGuide.vue'
 
   export default {
+    async mounted(){
+      //this.$store.dispatch('getAddress')
+      this.getAddress()
+      this.getUserInfo()
+    },
+
+    methods:{
+      ...mapActions(['getAddress','getUserInfo'])
+    },
+
     //映射成为标签
     components:{
       FooterGuide

@@ -9,11 +9,13 @@
 </template>
 
 <script>
+
   export default {
     //接收属性并且声明
     props:{
       title:String,
-    }
+    },
+
   }
 </script>
 
